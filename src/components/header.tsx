@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 import Logo from "./logo";
 import { cn } from "@/lib/utils";
 
@@ -49,6 +49,7 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs bg-background/80 backdrop-blur-xl">
+               <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
               <div className="flex h-full flex-col">
                 <div className="mb-8 flex items-center justify-between border-b pb-4">
                   <Logo />
