@@ -2,12 +2,12 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "What are the first steps in a property dispute in Haryana?",
-    answer: "The first step is usually to gather all your property documents, like the sale deed ('bainama') and land records ('jamabandi'). It's often helpful to try and resolve the issue through discussion first. If that doesn't work, sending a formal legal notice is a common next step before considering going to court. Consulting a lawyer early can save you a lot of trouble."
+    question: "What are the first steps in a property dispute in India?",
+    answer: "The first step is usually to gather all your property documents, like the sale deed and land records. It's often helpful to try and resolve the issue through discussion first. If that doesn't work, sending a formal legal notice is a common next step before considering going to court. Consulting a lawyer early can save you a lot of trouble."
   },
   {
-    question: "How do I file for divorce in Haryana?",
-    answer: "In Haryana, you can file for divorce in the family court of the district where you and your spouse last lived together, or where your marriage took place. You'll need to file a petition with the court, which should explain the reason for the divorce. It can be a mutual decision with your spouse or a contested one. It's a sensitive process, so getting guidance from a family lawyer is highly recommended."
+    question: "How do I file for divorce in India?",
+    answer: "In India, you can file for divorce in the family court of the district where you and your spouse last lived together, or where your marriage took place. You'll need to file a petition with the court, which should explain the reason for the divorce. It can be a mutual decision with your spouse or a contested one. It's a sensitive process, so getting guidance from a family lawyer is highly recommended."
   },
   {
     question: "What should I do if a product I bought is faulty?",
