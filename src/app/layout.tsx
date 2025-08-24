@@ -17,14 +17,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className={cn('font-body antialiased')}>
-        <div className="flex min-h-screen flex-col">
+      <body className={cn('font-body antialiased bg-background')}>
+        <div className="relative min-h-screen flex flex-col">
+          {/* Background Gradient */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-100 via-white to-cyan-100 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900/30 opacity-50 -z-10" />
+          
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />

@@ -21,25 +21,20 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between">
+    <header className="sticky top-4 z-40 w-full">
+      <div className="container mx-auto flex h-20 items-center justify-between rounded-3xl border border-white/20 bg-white/50 px-6 shadow-lg shadow-black/5 backdrop-blur-lg dark:border-white/10 dark:bg-white/5">
         <Logo />
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center space-x-6 md:flex">
+        <nav className="hidden items-center space-x-2 md:flex">
           {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                pathname === href ? "text-primary" : "text-foreground/60"
-              )}
-            >
-              {label}
-            </Link>
+            <Button key={href} asChild variant="ghost" className={cn("text-base", pathname === href ? "text-primary font-bold" : "text-muted-foreground")}>
+              <Link href={href}>
+                {label}
+              </Link>
+            </Button>
           ))}
-          <Button asChild>
+          <Button asChild className="ml-4 rounded-full glass-button">
             <Link href="/contact">Book Consultation</Link>
           </Button>
         </nav>
@@ -53,7 +48,7 @@ export default function Header() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs bg-background">
+            <SheetContent side="right" className="w-full max-w-xs bg-background/80 backdrop-blur-xl">
               <div className="flex h-full flex-col">
                 <div className="mb-8 flex items-center justify-between border-b pb-4">
                   <Logo />
@@ -62,14 +57,14 @@ export default function Header() {
                     <span className="sr-only">Close menu</span>
                   </Button>
                 </div>
-                <nav className="flex flex-1 flex-col space-y-4">
+                <nav className="flex flex-1 flex-col space-y-2">
                   {navLinks.map(({ href, label }) => (
                     <Link
                       key={href}
                       href={href}
                       className={cn(
-                        "text-lg font-medium transition-colors hover:text-primary",
-                        pathname === href ? "text-primary" : "text-foreground/80"
+                        "text-xl font-medium transition-colors hover:text-primary py-2 px-4 rounded-lg",
+                        pathname === href ? "text-primary bg-primary/10" : "text-foreground/80"
                       )}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -77,7 +72,7 @@ export default function Header() {
                     </Link>
                   ))}
                 </nav>
-                 <Button asChild size="lg" className="mt-auto">
+                 <Button asChild size="lg" className="mt-auto rounded-full glass-button">
                     <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Book Consultation</Link>
                   </Button>
               </div>

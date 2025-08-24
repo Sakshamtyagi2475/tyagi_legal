@@ -12,26 +12,21 @@ const teamMembers = [
 
 export default function AboutUsPage() {
   return (
-    <div className="space-y-20 md:space-y-32">
+    <div className="space-y-24 md:space-y-32 py-12">
       {/* Page Header */}
-      <section className="bg-secondary py-20">
-        <div className="container mx-auto text-center">
-          <h1 className="font-headline text-4xl font-bold md:text-5xl">About Tyagi Legal Counsel</h1>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            A tradition of excellence, a future of innovation. Learn about our firm's journey, values, and the people dedicated to your success.
-          </p>
-        </div>
+      <section className="container mx-auto text-center">
+        <h1 className="font-headline text-5xl font-bold md:text-7xl">About Us</h1>
+        <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
+          A tradition of excellence, a future of innovation.
+        </p>
       </section>
 
       {/* Our Story */}
       <section className="container mx-auto grid items-center gap-12 md:grid-cols-2">
         <div className="order-2 md:order-1">
-          <h2 className="font-headline text-3xl font-bold">Our Story</h2>
+          <h2 className="font-headline text-4xl font-bold">Our Story</h2>
           <p className="mt-4 text-muted-foreground">
             Founded in 2003 by Anjali Tyagi, our firm began with a simple yet powerful mission: to provide exceptional legal services with a client-first approach. From a small office with a handful of clients, we have grown into a respected institution known for our legal expertise and unwavering commitment to justice.
-          </p>
-          <p className="mt-4 text-muted-foreground">
-            Through decades of hard work and dedication, we have built a reputation for tackling complex legal challenges and achieving favorable outcomes. Our history is a testament to our core values of integrity, professionalism, and excellence.
           </p>
         </div>
         <div className="order-1 md:order-2">
@@ -41,85 +36,65 @@ export default function AboutUsPage() {
               data-ai-hint="law books gavel"
               width={600}
               height={400}
-              className="rounded-lg object-cover shadow-xl"
+              className="rounded-3xl object-cover"
             />
         </div>
       </section>
 
       {/* Our Mission & Values */}
-      <section className="bg-secondary py-20">
-        <div className="container mx-auto">
-          <div className="text-center">
-             <h2 className="font-headline text-3xl font-bold md:text-4xl">Our Mission & Values</h2>
-             <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">The principles that guide our every action and decision.</p>
+      <section className="container mx-auto">
+        <div className="text-center mb-12">
+            <h2 className="font-headline text-4xl font-bold md:text-5xl">Our Mission & Values</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">The principles that guide our every action and decision.</p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="glass-card p-8 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Target className="h-8 w-8" />
+            </div>
+            <h3 className="font-headline text-2xl font-bold">Client-Centric</h3>
+            <p className="mt-2 text-muted-foreground">Your success is our priority. We tailor our strategies to your unique needs and goals.</p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Target className="h-8 w-8" />
-                </div>
-                <CardTitle className="font-headline pt-4">Client-Centric</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">Your success is our priority. We tailor our strategies to your unique needs and goals, ensuring you are informed and empowered throughout the legal process.</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Scale className="h-8 w-8" />
-                </div>
-                <CardTitle className="font-headline pt-4">Integrity</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We uphold the highest ethical standards, providing honest, transparent, and trustworthy counsel. Our reputation is built on a foundation of integrity.</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
-                  <Users className="h-8 w-8" />
-                </div>
-                <CardTitle className="font-headline pt-4">Excellence</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">We are committed to the relentless pursuit of excellence in everything we do, from legal research and strategy to client communication and representation.</p>
-              </CardContent>
-            </Card>
+          <div className="glass-card p-8 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Scale className="h-8 w-8" />
+            </div>
+            <h3 className="font-headline text-2xl font-bold">Integrity</h3>
+            <p className="mt-2 text-muted-foreground">We uphold the highest ethical standards, providing honest, transparent, and trustworthy counsel.</p>
+          </div>
+          <div className="glass-card p-8 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Users className="h-8 w-8" />
+            </div>
+            <h3 className="font-headline text-2xl font-bold">Excellence</h3>
+            <p className="mt-2 text-muted-foreground">We are committed to the relentless pursuit of excellence in everything we do.</p>
           </div>
         </div>
       </section>
 
       {/* Meet Our Team */}
       <section className="container mx-auto">
-        <div className="text-center">
-          <h2 className="font-headline text-3xl font-bold md:text-4xl">Meet Our Team</h2>
-          <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
-            The experienced and dedicated professionals behind our firm's success.
+        <div className="text-center mb-12">
+          <h2 className="font-headline text-4xl font-bold md:text-5xl">Meet Our Team</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            The experienced professionals behind our firm's success.
           </p>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {teamMembers.map((member) => (
-            <Card key={member.name} className="overflow-hidden text-center">
-              <div className="h-48 w-full">
-                <Image
-                  src={`https://placehold.co/400x400.png`}
-                  alt={member.name}
-                  data-ai-hint={member.dataAiHint}
-                  width={400}
-                  height={400}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle className="font-headline text-xl">{member.name}</CardTitle>
-                <p className="text-sm text-primary">{member.title}</p>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">{member.bio}</p>
-              </CardContent>
-            </Card>
+            <div key={member.name} className="glass-card overflow-hidden text-center p-6">
+              <Image
+                src={`https://placehold.co/400x400.png`}
+                alt={member.name}
+                data-ai-hint={member.dataAiHint}
+                width={400}
+                height={400}
+                className="w-full h-auto rounded-2xl mb-4"
+              />
+              <h3 className="font-headline text-2xl font-bold">{member.name}</h3>
+              <p className="text-sm text-primary">{member.title}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{member.bio}</p>
+            </div>
           ))}
         </div>
       </section>

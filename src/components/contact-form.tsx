@@ -113,7 +113,7 @@ export default function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" size="lg">Send Message</Button>
+        <Button type="submit" className="w-full glass-button" size="lg">Send Message</Button>
       </form>
     </Form>
   );
