@@ -81,9 +81,9 @@ body {
 
 @layer components {
   .glass-card {
-    @apply rounded-3xl border border-white/20 bg-white/50 shadow-2xl shadow-black/5 backdrop-blur-lg dark:border-white/10 dark:bg-white/5;
+    @apply rounded-3xl border border-white/20 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow-2xl shadow-black/10 dark:border-white/10 dark:bg-gray-500/10;
   }
   .glass-button {
-      @apply rounded-full bg-gradient-to-b from-white/80 to-white/60 text-black shadow-lg shadow-black/10 ring-1 ring-black/5 backdrop-blur-lg hover:from-white/90 hover:to-white/70 dark:from-white/10 dark:to-white/5 dark:text-white;
+      @apply rounded-full bg-gradient-to-b from-white/80 to-white/60 text-black shadow-lg shadow-black/10 ring-1 ring-black/5 backdrop-blur-lg hover:from-white/90 hover:to-white/70 dark:from-white/20 dark:to-white/10 dark:text-white dark:ring-white/10;
   }
 }
