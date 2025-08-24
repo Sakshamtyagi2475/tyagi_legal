@@ -53,10 +53,6 @@ export default function Header() {
               <div className="flex h-full flex-col">
                 <div className="mb-8 flex items-center justify-between border-b pb-4">
                   <Logo />
-                  <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                  </Button>
                 </div>
                 <nav className="flex flex-1 flex-col space-y-2">
                   {navLinks.map(({ href, label }) => (
