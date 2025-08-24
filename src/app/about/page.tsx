@@ -15,18 +15,18 @@ export default function AboutUsPage() {
     <div className="space-y-24 md:space-y-32 py-12">
       {/* Page Header */}
       <section className="container mx-auto text-center">
-        <h1 className="font-headline text-5xl font-bold md:text-7xl">About Us</h1>
+        <h1 className="font-headline text-5xl font-bold md:text-7xl">A Little About Us</h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-          A tradition of excellence, a future of innovation.
+          Get to know the people dedicated to helping you.
         </p>
       </section>
 
       {/* Our Story */}
       <section className="container mx-auto grid items-center gap-12 md:grid-cols-2">
         <div className="order-2 md:order-1">
-          <h2 className="font-headline text-4xl font-bold">Our Story</h2>
+          <h2 className="font-headline text-4xl font-bold">Where We Come From</h2>
           <p className="mt-4 text-muted-foreground">
-            Founded in 2003 by Anjali Tyagi, our firm began with a simple yet powerful mission: to provide exceptional legal services with a client-first approach. From a small office with a handful of clients, we have grown into a respected institution known for our legal expertise and unwavering commitment to justice.
+            It all started in 2003 with a simple idea: legal support should be about helping people, not complicating their lives. Anjali Tyagi founded our firm on this principle, and it's guided us ever since. We've grown from a small office into a place people trust, known for our clear advice and commitment to what's right.
           </p>
         </div>
         <div className="order-1 md:order-2">
@@ -44,30 +44,30 @@ export default function AboutUsPage() {
       {/* Our Mission & Values */}
       <section className="container mx-auto">
         <div className="text-center mb-12">
-            <h2 className="font-headline text-4xl font-bold md:text-5xl">Our Mission & Values</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">The principles that guide our every action and decision.</p>
+            <h2 className="font-headline text-4xl font-bold md:text-5xl">Our Promises to You</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">These are the principles we live by, in every case and for every client.</p>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div className="glass-card p-8 text-center">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Target className="h-8 w-8" />
             </div>
-            <h3 className="font-headline text-2xl font-bold">Client-Centric</h3>
-            <p className="mt-2 text-muted-foreground">Your success is our priority. We tailor our strategies to your unique needs and goals.</p>
+            <h3 className="font-headline text-2xl font-bold">Your Goals First</h3>
+            <p className="mt-2 text-muted-foreground">We listen to what you need. Your success is our success, and we build our approach around you.</p>
           </div>
           <div className="glass-card p-8 text-center">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Scale className="h-8 w-8" />
             </div>
-            <h3 className="font-headline text-2xl font-bold">Integrity</h3>
-            <p className="mt-2 text-muted-foreground">We uphold the highest ethical standards, providing honest, transparent, and trustworthy counsel.</p>
+            <h3 className="font-headline text-2xl font-bold">Honest Guidance</h3>
+            <p className="mt-2 text-muted-foreground">We believe in being upfront and clear. You'll always get straight answers and trustworthy advice from us.</p>
           </div>
           <div className="glass-card p-8 text-center">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
               <Users className="h-8 w-8" />
             </div>
-            <h3 className="font-headline text-2xl font-bold">Excellence</h3>
-            <p className="mt-2 text-muted-foreground">We are committed to the relentless pursuit of excellence in everything we do.</p>
+            <h3 className="font-headline text-2xl font-bold">Unwavering Support</h3>
+            <p className="mt-2 text-muted-foreground">We're committed to doing our best for you, every single time. It's not just about the law; it's about the people we serve.</p>
           </div>
         </div>
       </section>
@@ -75,9 +75,9 @@ export default function AboutUsPage() {
       {/* Meet Our Team */}
       <section className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-4xl font-bold md:text-5xl">Meet Our Team</h2>
+          <h2 className="font-headline text-4xl font-bold md:text-5xl">Meet the Team</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            The experienced professionals behind our firm's success.
+            The friendly, experienced professionals ready to help.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">

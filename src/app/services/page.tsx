@@ -3,44 +3,44 @@ import { Briefcase, Landmark, ShieldCheck, Users, BrainCircuit, Building, BookOp
 
 const services = [
   { 
-    name: 'Corporate Law', 
+    name: 'For Your Business', 
     icon: Briefcase, 
-    description: 'Expert guidance on corporate governance, mergers, acquisitions, and compliance for businesses of all sizes.'
+    description: 'Whether you\'re just starting out or growing your business, we handle the legal details so you can focus on your vision.'
   },
   { 
-    name: 'Family Law', 
+    name: 'For Your Family', 
     icon: Users, 
-    description: 'Compassionate and robust representation in all family matters, including divorce, child custody, and prenuptial agreements.'
+    description: 'Navigating sensitive family matters like divorce or custody with care and clear-headed advice.'
   },
   { 
-    name: 'Real Estate Law', 
+    name: 'For Your Property', 
     icon: Landmark, 
-    description: 'Seamless legal services for residential and commercial real estate transactions, from agreements to disputes.'
+    description: 'We make buying, selling, or managing property straightforward and secure, protecting your investment.'
   },
   { 
-    name: 'Litigation & Dispute Resolution', 
+    name: 'When You Disagree', 
     icon: ShieldCheck, 
-    description: 'Strategic and vigorous representation in complex civil and commercial disputes in court, arbitration, or mediation.'
+    description: 'If you\'re facing a dispute, we\'ll find the best path forward, whether in court or through negotiation.'
   },
   { 
-    name: 'Intellectual Property', 
+    name: 'Your Big Ideas', 
     icon: BrainCircuit, 
-    description: 'Protection and monetization of your valuable intellectual assets, including patents, trademarks, and copyrights.'
+    description: 'Protecting your creative work and inventions, from trademarks to patents, so your ideas remain yours.'
   },
   { 
-    name: 'Commercial Law', 
+    name: 'Day-to-Day Business', 
     icon: Building, 
-    description: 'Comprehensive legal support for all your commercial activities, from contracts to business structures.'
+    description: 'From contracts to partnerships, we provide the legal backbone for your everyday commercial operations.'
   },
   { 
-    name: 'Estate Planning', 
+    name: 'Planning for the Future', 
     icon: BookOpen, 
-    description: 'Personalized estate planning services including wills, trusts, and powers of attorney to protect your assets.'
+    description: 'Helping you create a clear plan with wills and trusts to protect your legacy and provide for your loved ones.'
   },
   { 
-    name: 'Mediation & Arbitration', 
+    name: 'Finding Common Ground', 
     icon: Handshake, 
-    description: 'Effective alternative dispute resolution services to resolve conflicts outside of court, saving time and resources.'
+    description: 'Resolving conflicts peacefully and practically through mediation, saving you time, stress, and money.'
   },
 ];
 
@@ -49,9 +49,9 @@ export default function ServicesPage() {
     <div className="py-12">
       {/* Page Header */}
       <section className="container mx-auto text-center">
-        <h1 className="font-headline text-5xl font-bold md:text-7xl">Our Legal Services</h1>
+        <h1 className="font-headline text-5xl font-bold md:text-7xl">Legal Support for Your Life</h1>
         <p className="mx-auto mt-6 max-w-3xl text-lg text-muted-foreground">
-          A comprehensive range of expert legal services tailored to meet the diverse needs of our clients.
+          We offer clear, practical advice for the moments that matter most, whether in your business or personal life.
         </p>
       </section>
 
