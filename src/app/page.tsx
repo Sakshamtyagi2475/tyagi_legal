@@ -6,16 +6,16 @@ import Link from 'next/link';
 import { Briefcase, Landmark, ShieldCheck, Users } from 'lucide-react';
 
 const practiceAreas = [
-  { name: 'Corporate Law', icon: Briefcase, description: 'Expert guidance on corporate governance, mergers, and acquisitions.' },
-  { name: 'Family Law', icon: Users, description: 'Compassionate handling of divorce, custody, and family matters.' },
-  { name: 'Real Estate Law', icon: Landmark, description: 'Seamless transactions for residential and commercial properties.' },
-  { name: 'Litigation', icon: ShieldCheck, description: 'Strategic representation in complex civil and commercial disputes.' },
+  { name: 'Business & Corporate', icon: Briefcase, description: 'From starting up to scaling up, we handle the legal details so you can focus on your business.' },
+  { name: 'Family Matters', icon: Users, description: 'Guiding you through sensitive family issues with compassion and care.' },
+  { name: 'Property Law', icon: Landmark, description: 'Making your property transactions smooth and stress-free, from first home to final sale.' },
+  { name: 'Dispute Resolution', icon: ShieldCheck, description: 'Finding the clearest path to resolving conflicts, so you can move forward.' },
 ];
 
 const testimonials = [
-  { name: 'John D.', initial: 'JD', quote: 'Tyagi Legal provided exceptional service and guided me through a complex legal process with utmost professionalism.' },
-  { name: 'Sarah P.', initial: 'SP', quote: 'The team is knowledgeable, responsive, and truly cares about their clients. I couldn\'t have asked for better representation.' },
-  { name: 'Michael B.', initial: 'MB', quote: 'Their attention to detail and strategic approach were key to the successful outcome of my case. Highly recommended.' },
+  { name: 'Alex S.', initial: 'AS', quote: 'The team at Tyagi Legal turned a stressful situation into a manageable one. They explained everything clearly and were always there for me. I felt supported every step of the way.' },
+  { name: 'Jessica M.', initial: 'JM', quote: 'I was looking for a lawyer who would actually listen. I found that here. They took the time to understand my situation and fought for the best outcome for my family.' },
+  { name: 'David L.', initial: 'DL', quote: 'Professional, down-to-earth, and incredibly effective. They handled my case with a perfect mix of personal care and sharp legal skill. I can\'t recommend them enough.' },
 ]
 
 export default function Home() {
@@ -25,21 +25,21 @@ export default function Home() {
       <section className="container mx-auto text-center">
         <div className="relative z-10 max-w-4xl mx-auto">
             <h1 className="font-headline text-5xl font-bold md:text-8xl bg-gradient-to-b from-black to-gray-700 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
-              Excellence in Legal Counsel
+              Legal Guidance You Can Rely On
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground">
-              Providing comprehensive legal solutions with integrity and dedication.
+              Life has its complexities. We're here to provide clear, straightforward legal support to help you find your way through.
             </p>
             <Button asChild size="lg" className="mt-8 rounded-full px-8 py-6 text-lg glass-button">
-              <Link href="/contact">Book a Free Consultation</Link>
+              <Link href="/contact">Start with a Free Consultation</Link>
             </Button>
         </div>
       </section>
 
       {/* Practice Areas */}
       <section className="container mx-auto text-center">
-        <h2 className="font-headline text-4xl font-bold md:text-5xl">Our Practice Areas</h2>
-        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">We offer a wide range of legal services to meet the diverse needs of our clients.</p>
+        <h2 className="font-headline text-4xl font-bold md:text-5xl">How We Can Help</h2>
+        <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">We focus on the areas of law that touch people's everyday lives and businesses.</p>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {practiceAreas.map((area) => (
             <div key={area.name} className="glass-card text-center p-8 transition-transform hover:-translate-y-2">
@@ -59,38 +59,38 @@ export default function Home() {
           <div className="h-full min-h-[400px] w-full">
             <Image 
               src="https://placehold.co/600x600.png" 
-              alt="Lawyers in a meeting"
-              data-ai-hint="lawyers meeting"
+              alt="A friendly and welcoming legal office space"
+              data-ai-hint="friendly office"
               width={600}
               height={600}
               className="rounded-3xl object-cover"
             />
           </div>
           <div>
-            <h2 className="font-headline text-4xl font-bold md:text-5xl">Why Choose Tyagi Legal</h2>
+            <h2 className="font-headline text-4xl font-bold md:text-5xl">Your Peace of Mind is Our Priority</h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Our firm is built on a foundation of trust, experience, and a relentless pursuit of justice for our clients.
+             We believe good legal support is about more than just winning cases. It's about making you feel heard, understood, and confident.
             </p>
             <ul className="mt-8 space-y-6">
               <li className="flex items-start gap-4">
                 <ShieldCheck className="mr-3 mt-1 h-8 w-8 shrink-0 text-primary" />
                 <div>
-                  <h3 className="text-xl font-bold">Client-Centric Approach</h3>
-                  <p className="text-muted-foreground">We prioritize your needs, offering personalized strategies and transparent communication.</p>
+                  <h3 className="text-xl font-bold">You're Always in the Loop</h3>
+                  <p className="text-muted-foreground">We speak your language, not legal jargon. We'll keep you informed and involved every step of the way.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Briefcase className="mr-3 mt-1 h-8 w-8 shrink-0 text-primary" />
                 <div>
-                  <h3 className="text-xl font-bold">Proven Track Record</h3>
-                  <p className="text-muted-foreground">Our history of successful outcomes speaks to our legal expertise and dedication.</p>
+                  <h3 className="text-xl font-bold">Solutions That Make Sense</h3>
+                  <p className="text-muted-foreground">We focus on practical, effective outcomes that work for your unique situation.</p>
                 </div>
               </li>
               <li className="flex items-start gap-4">
                 <Users className="mr-3 mt-1 h-8 w-8 shrink-0 text-primary" />
                 <div>
-                  <h3 className="text-xl font-bold">Experienced Team</h3>
-                  <p className="text-muted-foreground">Our attorneys bring a wealth of knowledge and diverse experience to every case.</p>
+                  <h3 className="text-xl font-bold">A Team That Cares</h3>
+                  <p className="text-muted-foreground">We're not just your lawyers; we're your partners and advocates.</p>
                 </div>
               </li>
             </ul>
@@ -100,7 +100,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="container mx-auto text-center">
-        <h2 className="font-headline text-4xl font-bold md:text-5xl">What Our Clients Say</h2>
+        <h2 className="font-headline text-4xl font-bold md:text-5xl">Real Words from Real People</h2>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {testimonials.map((testimonial) => (
              <div key={testimonial.name} className="glass-card flex flex-col p-6">
