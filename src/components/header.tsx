@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-4 z-40 w-full">
-      <div className="container mx-auto flex h-20 items-center justify-between rounded-3xl border border-white/20 bg-white/50 px-6 shadow-lg shadow-black/5 backdrop-blur-lg dark:border-white/10 dark:bg-white/5">
+      <div className="container mx-auto flex h-20 items-center justify-between rounded-3xl border border-white/20 bg-white/50 px-6 shadow-lg shadow-black/5 backdrop-blur-md dark:border-white/10 dark:bg-white/5">
         <Logo />
 
         {/* Desktop Navigation */}
