@@ -10,32 +10,35 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-muted-foreground">
           <div className="space-y-4">
             <Logo />
-            <p className="text-sm">
+            <p className="text-md">
               Comprehensive legal solutions with integrity and dedication.
             </p>
           </div>
-          <div>
-            <h3 className="font-headline text-lg font-semibold text-foreground">Navigation</h3>
+          <div className="text-center justify-center items-center flex flex-col">
+            <h3 className="font-headline text-lg font-semibold text-foreground ">Navigation</h3>
+            <div className="flex gap-6 text-center">
             <ul className="mt-4 space-y-2">
               <li><Link href="/" className="hover:text-primary hover:underline">Home</Link></li>
-              <li><Link href="/about" className="hover:text-primary hover:underline">About Us</Link></li>
+              <li><Link href="/about" className="hover:text-primary hover:underline">About</Link></li>
               <li><Link href="/services" className="hover:text-primary hover:underline">Services</Link></li>
+              </ul>
+              <ul className="mt-4 space-y-2">
               <li><Link href="/blog" className="hover:text-primary hover:underline">Blog</Link></li>
               <li><Link href="/faq" className="hover:text-primary hover:underline">FAQ</Link></li>
               <li><Link href="/contact" className="hover:text-primary hover:underline">Contact</Link></li>
-            </ul>
+            </ul></div>
           </div>
-          <div>
+          <div className="text-center justify-center items-center flex flex-col">
             <h3 className="font-headline text-lg font-semibold text-foreground">Contact Us</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+            <ul className="mt-4 space-y-2 text-md">
               <li>123 Legal Avenue, Lawtown, ST 54321</li>
               <li>Email: contact@tyagilegal.com</li>
               <li>Phone: (123) 456-7890</li>
             </ul>
           </div>
-          <div>
+          <div className="text-center justify-center items-center flex flex-col">
             <h3 className="font-headline text-lg font-semibold text-foreground">Follow Us</h3>
-            <div className="mt-4 flex space-x-4">
+            <div className="mt-4 flex flex-col gap-2">
               <Link href="#" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-6 w-6" />
               </Link>
@@ -45,12 +48,6 @@ export default function Footer() {
               <Link href="#" className="text-muted-foreground hover:text-primary">
                 <Facebook className="h-6 w-6" />
               </Link>
-            </div>
-            <div className="mt-4">
-                <h3 className="font-headline text-lg font-semibold text-foreground">Admin</h3>
-                <ul className="mt-4 space-y-2">
-                    <li><Link href="/admin" className="hover:text-primary hover:underline">Admin Panel</Link></li>
-                </ul>
             </div>
           </div>
         </div>
