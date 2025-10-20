@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 import Logo from "./logo";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "./theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -24,7 +25,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-4 z-40 w-full">
-      <div className="container mx-auto flex h-20 items-center justify-between rounded-3xl border border-white/20 bg-white/50 px-6 shadow-lg shadow-black/5 backdrop-blur-md dark:border-white/10 dark:bg-white/5">
+      <div className="container mx-auto flex h-20 items-center justify-between rounded-3xl border border-white/20 bg-white/50 px-6 shadow-xl shadow-black/10 backdrop-blur-md dark:border-white/10 dark:bg-white/5 dark:shadow-black/20">
         <Logo />
 
         {/* Desktop Navigation */}
@@ -36,13 +37,15 @@ export default function Header() {
               </Link>
             </Button>
           ))}
+          <ThemeToggle />
           <Button asChild className="ml-4 rounded-full glass-button">
             <Link href="/contact">Book Consultation</Link>
           </Button>
         </nav>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">

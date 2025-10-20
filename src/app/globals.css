@@ -81,14 +81,20 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+  /* Smooth theme transition helper */
+  .theme-transition *, .theme-transition {
+    transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, fill 300ms ease, stroke 300ms ease, box-shadow 300ms ease, opacity 300ms ease !important;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply rounded-3xl border border-white/20 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 shadow-2xl shadow-black/10 dark:border-white/10 dark:bg-gray-500/10;
+    @apply rounded-3xl border border-white/30 bg-white/70 backdrop-blur-xl shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 dark:border-white/20 dark:bg-white/10 dark:shadow-black/20 dark:hover:shadow-black/30;
   }
+
   .glass-button {
-      @apply rounded-full bg-gradient-to-b from-white/80 to-white/60 text-black shadow-lg shadow-black/10 ring-1 ring-black/5 backdrop-blur-lg hover:from-white/90 hover:to-white/70 dark:from-white/20 dark:to-white/10 dark:text-white dark:ring-white/10;
+    @apply rounded-full bg-gradient-to-b from-primary to-primary/90 text-white shadow-lg shadow-primary/30 ring-1 ring-primary/20 backdrop-blur-lg hover:from-primary hover:to-primary/80 hover:shadow-lg  dark:from-white/25 dark:to-white/15 dark:text-white dark:ring-white/30 dark:shadow-white/10 dark:hover:from-white/30 dark:hover:to-white/20 dark:hover:shadow-white/15 transition-all duration-1000;
   }
 }

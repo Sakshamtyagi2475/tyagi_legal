@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Briefcase, Landmark, ShieldCheck, Users } from 'lucide-react';
+import ContactForm from '@/components/contact-form';
 
 const practiceAreas = [
   { name: 'Business & Corporate', icon: Briefcase, description: 'From starting up to scaling up, we handle the legal details so you can focus on your business.' },
@@ -116,6 +117,19 @@ export default function Home() {
                 </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="container mx-auto">
+        <div className="glass-card p-8">
+          <h2 className="font-headline text-3xl font-bold text-center">Ready to talk?</h2>
+          <p className="text-muted-foreground text-center mt-2">
+            Send us a message and we’ll get back to you within one business day.
+          </p>
+          <div className="mt-8 max-w-2xl mx-auto">
+            <ContactForm />
+          </div>
         </div>
       </section>
     </div>
