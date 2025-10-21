@@ -44,7 +44,7 @@ export default function Home() {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {practiceAreas.map((area) => (
             <div key={area.name} className="glass-card text-center p-8 transition-transform hover:-translate-y-2">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-4">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-4 hover:translate-y-1 transition-all duration-300">
                 <area.icon className="h-10 w-10" />
               </div>
               <h3 className="font-headline text-2xl font-bold">{area.name}</h3>

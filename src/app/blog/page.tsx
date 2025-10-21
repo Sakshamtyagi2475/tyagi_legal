@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { posts } from '@/lib/posts';
+import { getAllBlogs } from '@/lib/posts';
 import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllBlogs();
+
   return (
     <div className="py-12">
       <section className="container mx-auto text-center">
@@ -20,9 +22,11 @@ export default function BlogPage() {
             <Card key={post.slug} className="glass-card flex flex-col">
               <CardHeader>
                 <CardTitle className="font-headline text-2xl">{post.title}</CardTitle>
-                <p className="text-sm text-muted-foreground">{post.date}</p>
+                <p className="text-sm text-muted-foreground">
+                  {new Date(post.created_at).toLocaleDateString()}
+                </p>
               </CardHeader>
-              <CardDescription className="px-6 pb-6 flex-grow">{post.description}</CardDescription>
+              <CardDescription className="px-6 pb-6 flex-grow">{post.excerpt}</CardDescription>
               <CardFooter>
                  <Button asChild variant="link" className="p-0 h-auto text-primary">
                   <Link href={`/blog/${post.slug}`}>

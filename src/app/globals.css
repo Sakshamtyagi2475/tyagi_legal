@@ -95,6 +95,6 @@
   }
 
   .glass-button {
-    @apply rounded-full bg-gradient-to-b from-primary to-primary/90 text-white shadow-lg shadow-primary/30 ring-1 ring-primary/20 backdrop-blur-lg hover:from-primary hover:to-primary/80 hover:shadow-lg  dark:from-white/25 dark:to-white/15 dark:text-white dark:ring-white/30 dark:shadow-white/10 dark:hover:from-white/30 dark:hover:to-white/20 dark:hover:shadow-white/15 transition-all duration-1000;
+    @apply rounded-full bg-gradient-to-b from-primary to-primary/90 text-white shadow-lg  ring-1 ring-primary/20 backdrop-blur-lg hover:from-primary hover:to-primary/80 hover:shadow-lg hover:shadow-primary/30 dark:from-white/25 dark:to-white/15 dark:text-white dark:ring-white/30 dark:shadow-white/10 dark:hover:from-white/30 dark:hover:to-white/20 dark:hover:shadow-white/15 transition-all duration-300;
   }
 }

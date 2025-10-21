@@ -1,17 +1,18 @@
 import { notFound } from 'next/navigation';
-import { posts } from '@/lib/posts';
+import { getBlogBySlug, getAllBlogs } from '@/lib/posts';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 
 export async function generateStaticParams() {
+  const posts = await getAllBlogs();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+  const post = await getBlogBySlug(params.slug);
 
   if (!post) {
     notFound();
@@ -28,7 +29,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </Button>
         <article className="prose prose-lg dark:prose-invert mx-auto max-w-4xl">
             <h1 className="font-headline text-4xl md:text-6xl font-bold mb-4">{post.title}</h1>
-            <p className="text-muted-foreground text-lg mb-8">{post.date}</p>
+            <p className="text-muted-foreground text-lg mb-8">
+              {new Date(post.created_at).toLocaleDateString()}
+            </p>
             <div className="space-y-6 text-lg text-foreground/90" dangerouslySetInnerHTML={{ __html: post.content }} />
         </article>
       </div>

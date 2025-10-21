@@ -28,7 +28,7 @@ export function ThemeToggle() {
     root.classList.add('theme-transition');
     window.setTimeout(() => {
       root.classList.remove('theme-transition');
-    }, 500);
+    }, 300);
     setTheme(theme === "light" ? "dark" : "light");
   };
 
