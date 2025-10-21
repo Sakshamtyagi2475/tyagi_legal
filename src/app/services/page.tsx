@@ -1,46 +1,66 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Briefcase, Landmark, ShieldCheck, Users, BrainCircuit, Building, BookOpen, Handshake } from 'lucide-react';
+import { Briefcase, ShieldCheck, Users, Building, ShoppingBag, ScrollText, ShieldAlert, FileSignature, Banknote, Building2, HeartOff, Gavel } from 'lucide-react';
 
 const services = [
   { 
-    name: 'For Your Business', 
-    icon: Briefcase, 
-    description: 'Whether you\'re just starting out or growing your business, we handle the legal details so you can focus on your vision.'
+    name: 'Criminal lawyer', 
+    icon: Gavel, 
+    description: 'Expert in defending clients accused of crimes and legal violations.'
   },
   { 
-    name: 'For Your Family', 
-    icon: Users, 
-    description: 'Navigating sensitive family matters like divorce or custody with care and clear-headed advice.'
+    name: 'Divorce Lawyer', 
+    icon: HeartOff, 
+    description: 'Specializes in marriage dissolution, alimony, and child custody matters.'
   },
   { 
-    name: 'For Your Property', 
-    icon: Landmark, 
-    description: 'We make buying, selling, or managing property straightforward and secure, protecting your investment.'
+    name: 'RERA Lawyer', 
+    icon: Building2, 
+    description: 'Handles disputes related to real estate projects and property regulations.'
   },
   { 
-    name: 'When You Disagree', 
+    name: 'Cheque Bounce lawyer', 
+    icon: Banknote, 
+    description: 'Manages cases under Negotiable Instruments Act for dishonored cheques.'
+  },
+  { 
+    name: 'Property lawyer', 
+    icon: FileSignature, 
+    description: 'Deals with property disputes, transfers, registration, and legal verification.'
+  },
+  { 
+    name: 'Anticipatory Bail Lawyer', 
     icon: ShieldCheck, 
-    description: 'If you\'re facing a dispute, we\'ll find the best path forward, whether in court or through negotiation.'
+    description: 'Assists clients in obtaining pre-arrest protection against criminal charges.'
   },
   { 
-    name: 'Your Big Ideas', 
-    icon: BrainCircuit, 
-    description: 'Protecting your creative work and inventions, from trademarks to patents, so your ideas remain yours.'
+    name: 'Cyber Crime Lawyer', 
+    icon: ShieldAlert, 
+    description: 'Handles online fraud, data breaches, and cyber law violations.'
   },
   { 
-    name: 'Day-to-Day Business', 
+    name: 'Civil Lawyer', 
+    icon: ScrollText, 
+    description: 'Manages non-criminal disputes involving property, contracts, or personal rights.'
+  },
+  { 
+    name: 'Consumer Lawyer', 
+    icon: ShoppingBag, 
+    description: 'Protects consumer rights against unfair trade practices and product defects.'
+  },
+  { 
+    name: 'Family Lawyer', 
+    icon: Users, 
+    description: 'Resolves family disputes including adoption, custody, and domestic issues.'
+  },
+  { 
+    name: 'Labour Lawyer', 
+    icon: Briefcase, 
+    description: 'Advocates for employee rights, workplace disputes, and industrial relations.'
+  },
+  { 
+    name: 'Corporate Lawyer', 
     icon: Building, 
-    description: 'From contracts to partnerships, we provide the legal backbone for your everyday commercial operations.'
-  },
-  { 
-    name: 'Planning for the Future', 
-    icon: BookOpen, 
-    description: 'Helping you create a clear plan with wills and trusts to protect your legacy and provide for your loved ones.'
-  },
-  { 
-    name: 'Finding Common Ground', 
-    icon: Handshake, 
-    description: 'Resolving conflicts peacefully and practically through mediation, saving you time, stress, and money.'
+    description: 'Advises companies on compliance, mergers, contracts, and governance issues.'
   },
 ];
 
@@ -57,9 +77,9 @@ export default function ServicesPage() {
 
       {/* Services Grid */}
       <section className="container mx-auto mt-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service) => (
-            <div key={service.name} className="glass-card flex flex-col p-8 transition-shadow hover:shadow-2xl">
+            <div key={service.name} className="glass-card flex flex-col p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-200">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                   <service.icon className="h-8 w-8" />
