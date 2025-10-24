@@ -17,7 +17,7 @@ export default function NewFAQPage() {
   const [formData, setFormData] = useState({
     question: '',
     answer: '',
-    order: 0
+    order: 0,
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -25,37 +25,48 @@ export default function NewFAQPage() {
     setLoading(true)
 
     try {
-      // Get the highest order number and add 1
-      const { data: maxOrderData } = await supabase
+      // Fetch max order from existing FAQs
+      const { data: maxOrderData, error: orderError } = await supabase
         .from('faqs')
         .select('order')
         .order('order', { ascending: false })
         .limit(1)
 
-      const nextOrder = maxOrderData && maxOrderData.length > 0 
-        ? maxOrderData[0].order + 1 
-        : 1
+      if (orderError) throw orderError
 
-      const { error } = await supabase
-        .from('faqs')
-        .insert([{
-          ...formData,
-          order: nextOrder
-        }])
+      // Determine next order value
+      const nextOrder =
+        formData.order && formData.order > 0
+          ? formData.order
+          : (maxOrderData?.[0]?.order || 0) + 1
+
+      // Insert new FAQ
+      const { error } = await supabase.from('faqs').insert([
+        {
+          question: formData.question,
+          answer: formData.answer,
+          order: nextOrder,
+        },
+      ])
 
       if (error) throw error
 
-      router.push('/admin/faqs')
-    } catch (error) {
+      // Clear form immediately
+      setFormData({ question: '', answer: '', order: 0 })
+
+      // Redirect after 5 seconds
+      setTimeout(() => {
+        router.push('/admin/faqs')
+      }, 5000)
+    } catch (error: any) {
       console.error('Error creating FAQ:', error)
-      alert('Error creating FAQ. Please try again.')
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 animate-in fade-in duration-500">
       <div className="flex items-center space-x-4">
         <Link href="/admin/faqs">
           <Button variant="outline" size="sm">
@@ -77,7 +88,9 @@ export default function NewFAQPage() {
               <Input
                 id="question"
                 value={formData.question}
-                onChange={(e) => setFormData({ ...formData, question: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, question: e.target.value })
+                }
                 placeholder="What is your question?"
                 required
               />
@@ -88,7 +101,9 @@ export default function NewFAQPage() {
               <Textarea
                 id="answer"
                 value={formData.answer}
-                onChange={(e) => setFormData({ ...formData, answer: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, answer: e.target.value })
+                }
                 placeholder="Provide a detailed answer..."
                 rows={6}
                 required
@@ -101,12 +116,17 @@ export default function NewFAQPage() {
                 id="order"
                 type="number"
                 value={formData.order}
-                onChange={(e) => setFormData({ ...formData, order: parseInt(e.target.value) || 0 })}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    order: parseInt(e.target.value) || 0,
+                  })
+                }
                 placeholder="Order in which this FAQ appears"
                 min="1"
               />
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                Lower numbers appear first. Leave as 0 to add to the end.
+                Lower numbers appear first. Leave blank to add to the end.
               </p>
             </div>
           </CardContent>

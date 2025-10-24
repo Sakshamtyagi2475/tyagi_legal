@@ -18,16 +18,16 @@ export default async function FAQPage() {
       {/* FAQ Accordion */}
       <section className="container mx-auto mt-20 max-w-4xl">
         <Accordion type="single" collapsible className="w-full space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem key={faq.id} value={`item-${index}`} className="glass-card p-4">
-              <AccordionTrigger className="text-left text-xl font-headline font-bold hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="pt-4 text-lg text-muted-foreground">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+        {faqs.map((faq) => (
+          <AccordionItem key={faq.id} value={`item-${faq.id}`} className="glass-card p-4">
+            <AccordionTrigger className="text-left text-xl font-headline font-bold hover:no-underline">
+              {faq.question}
+            </AccordionTrigger>
+            <AccordionContent className="pt-4 text-lg text-muted-foreground">
+              {faq.answer}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
         </Accordion>
       </section>
     </div>

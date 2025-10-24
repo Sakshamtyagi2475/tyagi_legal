@@ -23,7 +23,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-headline">Our Office</h3>
-                <p className="text-muted-foreground text-lg">123 Legal Avenue, Lawtown, ST 54321</p>
+                <ul className="flex flex-col gap-4 list-disc">
+                  <li>A- 37, Lower Ground Floor (Basement) Amar Colony, Opposite SS Khalsa School, Lajpat Nagar- IV, Delhi - 110024</li>
+                  <li>B-98, Nehru Ground NIT Faridabad, BK Chowk, Nehru Ground, New Industrial Township, near Head Post Office, Faridabad, Haryana 121001</li>
+                  <li>Chamber No. 335, Lawyer Chamber Building, District Court Faridabad, Sector - 12, Faridabad</li>
+                  <li>E- 150, Sector 22, Noida, Uttar Pradesh - 201301</li>
+                  <li>District Court Surajpur, Greater Noida</li>
+                  <li>Chamber No. 148, Saheed Bhagat Singh Block, Gurgaon District Court, Gurgaon</li>
+                </ul>
               </div>
             </div>
             <div className="flex items-start gap-6">
@@ -32,7 +39,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-headline">Email Us</h3>
-                <p className="text-muted-foreground text-lg">contact@tyagilegal.com</p>
+                <p className="text-muted-foreground text-lg">tyagiassociatelawyer@gmail.com</p>
+                <p className="text-muted-foreground text-lg">juslexlawyer@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-6">
@@ -41,7 +49,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold font-headline">Call Us</h3>
-                <p className="text-muted-foreground text-lg">(123) 456-7890</p>
+                <p className="text-muted-foreground text-lg">+91 98733 24300</p>
+                <p className="text-muted-foreground text-lg">+91 85069 24300</p>
               </div>
             </div>
           </div>

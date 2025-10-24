@@ -127,3 +127,6 @@ export {
   ToastClose,
   ToastAction,
 }
+export function useToast() {
+  // your toast logic
+}

@@ -14,31 +14,31 @@ export default function Footer() {
               Comprehensive legal solutions with integrity and dedication.
             </p>
           </div>
-          <div className="text-center justify-center items-center flex flex-col">
+          <div className="text-center justify-start items-center flex flex-col">
             <h3 className="font-headline text-lg font-semibold text-foreground ">Navigation</h3>
-            <div className="flex gap-6 text-center">
-            <ul className="mt-4 space-y-2">
+            <div className="flex gap-3 text-center">
+            <ul className="mt-4 flex flex-col gap-3 text-start">
               <li><Link href="/" className="hover:text-primary hover:underline">Home</Link></li>
               <li><Link href="/about" className="hover:text-primary hover:underline">About</Link></li>
               <li><Link href="/services" className="hover:text-primary hover:underline">Services</Link></li>
               </ul>
-              <ul className="mt-4 space-y-2">
+              <ul className="mt-4 flex flex-col gap-3 text-start">
               <li><Link href="/blog" className="hover:text-primary hover:underline">Blog</Link></li>
               <li><Link href="/faq" className="hover:text-primary hover:underline">FAQ</Link></li>
               <li><Link href="/contact" className="hover:text-primary hover:underline">Contact</Link></li>
             </ul></div>
           </div>
-          <div className="text-center justify-center items-center flex flex-col">
+          <div className="text-center justify-start items-center flex flex-col">
             <h3 className="font-headline text-lg font-semibold text-foreground">Contact Us</h3>
             <ul className="mt-4 space-y-2 text-md">
-              <li>123 Legal Avenue, Lawtown, ST 54321</li>
-              <li>Email: contact@tyagilegal.com</li>
-              <li>Phone: (123) 456-7890</li>
+              <li>Chamber No. 335, Lawyer Chamber Building, District Court Faridabad, Sector - 12, Faridabad</li>
+              <li>Email: tyagiassociatelawyer@gmail.com</li>
+              <li>Phone: +91 98733 24300</li>
             </ul>
           </div>
-          <div className="text-center justify-center items-center flex flex-col">
+          <div className="text-center justify-start items-center flex flex-col">
             <h3 className="font-headline text-lg font-semibold text-foreground">Follow Us</h3>
-            <div className="mt-4 flex flex-col gap-2">
+            <div className="mt-4 flex flex-col gap-3">
               <Link href="#" className="text-muted-foreground hover:text-primary">
                 <Twitter className="h-6 w-6" />
               </Link>

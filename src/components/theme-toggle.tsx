@@ -23,7 +23,6 @@ export function ThemeToggle() {
   }
 
   const handleToggle = () => {
-    // Add a temporary class to enable smooth transitions across the app
     const root = document.documentElement;
     root.classList.add('theme-transition');
     window.setTimeout(() => {

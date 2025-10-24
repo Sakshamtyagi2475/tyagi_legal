@@ -2,16 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* -----------------------------
+   Base Layer
+------------------------------ */
 @layer base {
   html {
     @apply scroll-smooth;
   }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
   }
-}
 
-@layer base {
   :root {
     --background: 220 20% 98%;
     --foreground: 220 10% 15%;
@@ -73,28 +75,45 @@
     --input: 220 15% 22%;
     --ring: 217 91% 60%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    transition: background-color 300ms ease, color 300ms ease;
+    transition:
+      background-color 300ms ease,
+      color 300ms ease;
   }
+
   /* Smooth theme transition helper */
-  .theme-transition *, .theme-transition {
-    transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, fill 300ms ease, stroke 300ms ease, box-shadow 300ms ease, opacity 300ms ease !important;
+  .theme-transition,
+  .theme-transition * {
+    transition:
+      background-color 300ms ease,
+      color 300ms ease,
+      border-color 300ms ease,
+      fill 300ms ease,
+      stroke 300ms ease,
+      box-shadow 300ms ease,
+      opacity 300ms ease !important;
   }
 }
 
+
 @layer components {
   .glass-card {
-    @apply rounded-3xl border border-white/30 bg-white/70 backdrop-blur-xl shadow-lg shadow-black/5 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 dark:border-white/20 dark:bg-white/10 dark:shadow-black/20 dark:hover:shadow-black/30;
+    @apply rounded-3xl border border-white/30 bg-white/70 backdrop-blur-xl shadow-lg shadow-black/5 
+           hover:shadow-xl hover:shadow-black/10 transition-all duration-300 
+           dark:border-white/20 dark:bg-white/10 dark:shadow-black/20 dark:hover:shadow-black/30;
   }
 
   .glass-button {
-    @apply rounded-full bg-gradient-to-b from-primary to-primary/90 text-white shadow-lg  ring-1 ring-primary/20 backdrop-blur-lg hover:from-primary hover:to-primary/80 hover:shadow-lg hover:shadow-primary/30 dark:from-white/25 dark:to-white/15 dark:text-white dark:ring-white/30 dark:shadow-white/10 dark:hover:from-white/30 dark:hover:to-white/20 dark:hover:shadow-white/15 transition-all duration-300;
+    @apply rounded-full bg-gradient-to-b from-primary to-primary/90 text-white shadow-lg ring-1 ring-primary/20 
+           backdrop-blur-lg hover:from-primary hover:to-primary/80 hover:shadow-lg hover:shadow-primary/30 
+           dark:from-white/25 dark:to-white/15 dark:text-white dark:ring-white/30 dark:shadow-white/10 
+           dark:hover:from-white/30 dark:hover:to-white/20 dark:hover:shadow-white/15 
+           transition-all duration-300;
   }
 }

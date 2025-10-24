@@ -26,10 +26,10 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn('font-body antialiased bg-background')}>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> 
         <div className="relative min-h-screen flex flex-col">
           {/* Background Gradient */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-100 via-white to-cyan-100 dark:from-gray-900 dark:via-gray-900 dark:to-blue-900/30 opacity-50 -z-10" />
+          <div className="absolute top-0 left-0 w-full h-full bg-white dark:bg-black opacity-50 -z-10" />
           
           <Header />
           <main className="flex-grow">{children}</main>

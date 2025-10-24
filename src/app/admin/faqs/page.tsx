@@ -95,7 +95,7 @@ export default function FAQsPage() {
             New FAQ
           </Button>
         </Link>
-        <Link href="/admin/faqs/new">
+        <Link href="/admin/dashboard">
           <Button className='bg-gray-800'>
             <CircleArrowLeft className="h-4 w-4 mr-2" />
               Go Back

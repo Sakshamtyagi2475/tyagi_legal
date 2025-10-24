@@ -94,3 +94,71 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "hsl(var(--background) / <alpha-value>)",
+        foreground: "hsl(var(--foreground) / <alpha-value>)",
+
+        card: "hsl(var(--card) / <alpha-value>)",
+        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
+
+        popover: "hsl(var(--popover) / <alpha-value>)",
+        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
+
+        primary: "hsl(var(--primary) / <alpha-value>)",
+        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
+
+        secondary: "hsl(var(--secondary) / <alpha-value>)",
+        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
+
+        muted: "hsl(var(--muted) / <alpha-value>)",
+        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
+
+        accent: "hsl(var(--accent) / <alpha-value>)",
+        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
+
+        destructive: "hsl(var(--destructive) / <alpha-value>)",
+        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
+
+        border: "hsl(var(--border) / <alpha-value>)",
+        input: "hsl(var(--input) / <alpha-value>)",
+        ring: "hsl(var(--ring) / <alpha-value>)",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-15%)",
+            animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
+        },
+      },
+      animation: {
+        bounce: "bounce 1s infinite",         // default speed
+        "bounce-slow": "bounce 2s infinite",  // 2x slower
+        "bounce-slower": "bounce 3s infinite" // 3x slower
+      },
+    },
+  },
+  plugins: [],
+};
+
+
+
+

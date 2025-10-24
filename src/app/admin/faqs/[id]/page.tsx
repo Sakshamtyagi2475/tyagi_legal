@@ -16,7 +16,7 @@ interface EditFAQPageProps {
 }
 
 export default function EditFAQPage({ params }: EditFAQPageProps) {
-  const { id } = React.use(params)
+  const { id } = React.use(params) // ✅ unwrap params Promise
   const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
